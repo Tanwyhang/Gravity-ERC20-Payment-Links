@@ -3,7 +3,6 @@
 import { useState, useCallback, useMemo, useRef } from "react"
 import { Upload, Eye, ArrowLeft, Copy } from "lucide-react"
 import { Spinner } from "@/components/ui/shadcn-io/spinner"
-import { AuroraBackground } from "@/components/ui/shadcn-io/aurora-background"
 import { Slider } from "@/components/ui/slider"
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { QRCode } from "@/components/ui/shadcn-io/qr-code"
@@ -215,7 +214,7 @@ export default function CustomThumbnailPage() {
 
     return (
       <div
-        className="relative backdrop-blur-xl p-4 md:p-6 shadow-2xl transition-all duration-300 max-w-full max-h-[calc(100vh-12rem)] md:max-h-[calc(100vh-10rem)] overflow-hidden w-full"
+        className="relative backdrop-blur-xl p-8 md:p-10 shadow-2xl transition-all duration-300 w-full"
         style={{
           borderRadius: `${config.borderRadius}px`,
           backgroundColor: config.backgroundColor,
@@ -467,8 +466,7 @@ export default function CustomThumbnailPage() {
       </header>
 
       <main className="relative">
-        <AuroraBackground className="min-h-screen">
-          <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-12 relative z-10">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 pb-8 sm:pb-12 relative z-10">
             <div className="space-y-6 sm:space-y-8">
               <div className="text-center space-y-3 sm:space-y-4 px-2 sm:px-4">
                 <h2 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter">CUSTOMIZE_YOUR_MODAL</h2>
@@ -610,7 +608,7 @@ export default function CustomThumbnailPage() {
               </div>
 
                 <div className="space-y-4 sm:space-y-6">
-                  <div className="md:sticky top-4 md:top-8 max-h-[calc(100vh-8rem)] sm:max-h-[calc(100vh-10rem)] md:max-h-[calc(100vh-12rem)] flex flex-col items-center px-2 overflow-y-auto">
+                  <div className="sticky top-4 flex flex-col items-center px-2">
                     <div className="flex items-center gap-2 mb-3 sm:mb-4">
                       <Eye className="w-4 h-4" />
                       <span className="text-sm font-bold">LIVE_PREVIEW</span>
@@ -623,7 +621,6 @@ export default function CustomThumbnailPage() {
               </div>
             </div>
           </section>
-        </AuroraBackground>
 
         {/* Success Modal */}
         {showSuccessModal && transactionHash && (

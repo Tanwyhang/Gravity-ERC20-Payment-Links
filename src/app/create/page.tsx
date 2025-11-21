@@ -23,7 +23,7 @@ export default function CreatePage() {
           <section className="container mx-auto px-4 py-12 relative z-10">
             <div className="space-y-8">
               <div className="text-center space-y-4">
-                <h1 className="text-4xl font-bold tracking-tighter">CHOOSE_YOUR_TEMPLATE</h1>
+                <h1 className="text-4xl font-bold tracking-tighter">CHOOSE YOUR TEMPLATE</h1>
                 <p className="text-muted-foreground max-w-2xl mx-auto">
                   Select a payment modal template that fits your brand. Each template is fully customizable and ready to integrate.
                 </p>
